@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body,
+        .section-one,
+        .section-two,
+        .section-three {
+            height: 100%;
+            width: 100%;
+            margin: 0%;
+        }
+
+        .header-row {
+            background-color: rgba(138, 35, 130, 0.885);
+            display: flex;
+            flex-direction: row;
+            /* position: fixed;
+            width: 100% ; */
+            justify-content: space-around;
+        }
+        .footer-row{
+            background-color: rgba(138, 35, 130, 0.885);
+            color: white;
+            font-size: medium;
+            justify-content: space-around;
+            text-align: center;
+            padding: 0.5%;
+        }
+
+        .header-row .header-row-font {
+            margin-top: 12px;
+            margin-left: 0px;
+            padding: 10px;
+            padding-left: 0px;
+            font-size: large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: white;
+            text-align: left;
+
+        }
+
+        .header-row .header-row-profile-icon {
+            height: 45px;
+            width: 45px;
+            padding: 10px;
+        }
+
+        .header-row a {
+            margin: 20px;
+            padding: 5px;
+            float: left;
+            text-decoration: none;
+            color: white;
+            font-size: small;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .section-one {
+            background-image: url(/images/background-Events.jpg);
+            height: 100%;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            text-align: center;
+        }
+
+        .section-one img {
+            padding: 12px;
+            width: 210px;
+            height: 210px;
+            margin: 0%;
+            transition: 2s;
+
+        }
+
+        .section-one img:hover {
+            transform: scale(1.2);
+        }
+
+        .section-one h2,
+        h3 {
+            margin: 0%;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            font-size: large;
+        }
+
+        .section-one-events {
+            margin: 2%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .events {
+            margin: 1%;
+            padding: 10px;
+
+            background-color: rgba(217, 214, 209, 0.5);
+        }
+
+        .section-two {
+            background-image: url(images/background-testimonial.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 165%;
+            background-attachment: fixed;
+        }
+
+        .section-two h3 {
+            margin: 0%;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            font-size: large;
+            padding: 3%;
+        }
+
+        .section-two-items {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section-two-items .section-two-item-one,
+        .section-two-item-two,
+        .section-two-item-three,
+        .section-two-item-four {
+            color: whitesmoke;
+            background-color: rgba(86, 148, 176, 0.57);
+            width: 320px;
+            height: 140px;
+            margin-left: 3%;
+            margin-bottom: 5%;
+            padding: 15px;
+        }
+
+        .person-name {
+            margin: 0%;
+            padding: 0%;
+            float: right;
+        }
+
+        .person-feedback {
+            padding-bottom: 0%;
+        }
+
+        .section-two-item-group {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start
+        }
+
+        .section-two-item-group img {
+            width: 175px;
+            height: 150px;
+            border-radius: 50%;
+
+        }
+
+        .section-three {
+            background-image: url(images/background-contact.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+
+        .section-three-groups{
+            display: inline-flex;
+            flex-direction: row;
+            
+        }
+
+        .section-three-group-one{
+            
+            width:40%;
+            height:40%;
+            /* color: rgb(102, 255, 0); */
+            color: rgb(240, 94, 186);
+            margin-top: 7%;
+            padding-left: 2%;
+            align-items: left;
+            justify-items: left;
+        }
+
+        .contact-us-form{            
+            background-color: rgba(224, 235, 235,0.6);
+            margin-left: 35%;
+            margin-top: 5%;
+            padding: 3%;
+            width: 55%;
+            height: 45%;
+            justify-content: space-evenly;  
+            align-items: left;        
+        }
+        
+        .contac-us-info{            
+            color: #b9e73c;
+            margin-left: 27%;
+            padding: 3%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+            font-weight: 50;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .form-item-input{
+            background-color: rgba(240, 162, 223, 0.8);
+            border-width: 0px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="header-row">
+        <img class="header-row-profile-icon" src="/images/profile-icon.jpg" alt="pr">
+        <div class="header-row-font">
+            <b>P</b>icture<b>S</b>que
+        </div>
+        <div class="header-row-menus">
+            <a class="header-row-menus-item" href="#Events"> EVENTS</a>
+            <a class="header-row-menus-item" href="#Testimonials">TESTIMONIALS</a>
+            <a class="header-row-menus-item" href="#ContactUs">CONTACT US</a>
+        </div>
+    </header>
+    <section id="Events" class="section-one">
+        <h2>EVENTS WE CAPTURE</h2>
+        <section class="section-one-events">
+            <article class="events">
+                <img src="images/travel.jpg" alt="travel-photography">
+                <h3>Travel</h3>
+            </article>
+            <article class="events">
+                <img src="images/party.jpg" alt="party-photography">
+                <h3>Party</h3>
+            </article>
+            <article class="events">
+                <img src="images/wedding.jpg" alt="wedding-photography">
+                <h3>Wedding</h3>
+            </article>
+            <article class="events">
+                <img src="images/corporate.jpg" alt="corporate-photography">
+                <h3>Corporate</h3>
+            </article>
+        </section>
+    </section>
+
+    <section id="Testimonials" class="section-two">
+        <h3>VOICE OF OUR CLIENTS</h3>
+        <section class="section-two-items">
+            <section class="section-two-item-group">
+                <img src="images/person-one.png" alt="">
+                <article class="section-two-item-one">
+                    <p class="person-feedback">Your photos are STUNNING! Thank you so, so much. They are all just
+                        spectacular and a gift we will
+                        treasure always. We are really grateful.</p>
+                    <p class="person-name"> -Tina</p>
+                </article>
+            </section>
+
+            <section class="section-two-item-group">
+                <img src="images/person-two.jpg" alt="">
+                <article class="section-two-item-two">
+                    <p class="person-feedback">Thank you! Thank you! Thank you! A million thank you's to you for
+                        capturing the day and night without
+                        missing a beat. You were a blast to work with and we loved every minute of it!</p>
+                    <p class="person-name"> -Rui</p>
+                </article>
+            </section>
+
+            <section class="section-two-item-group">
+                <img src="images/person-three.jpg" alt="">
+                <article class="section-two-item-three">
+                    <p class="person-feedback">Thank you ever so much. You have exceeded everyones expectations at our
+                        wedding! Thanks a million.
+                    </p>
+                    <p class="person-name"> -Carlos</p>
+                </article>
+            </section>
+
+            <section class="section-two-item-group">
+                <img src="images/person-four.png" alt="">
+                <article class="section-two-item-four">
+                    <p class="person-feedback">A picture is worth a thousand words, but your pictures leave us
+                        speechless. Your creativity and
+                        timing caught the beauty and essence of our event. You are amazing and truly fun to work with.
+                    </p>
+                    <p class="person-name"> -Sara</p>
+                </article>
+            </section>
+        </section>
+    </section>
+    <section id="ContactUs" class="section-three">
+        <h3>CONTACT US</h3>
+        <section class="section-three-groups">
+            <section class = "section-three-group-two">
+                <article class = "contact-us-form">
+                    <form action="/action_page.php">
+                        <input class ="form-item-input" type="text" placeholder="Name" id="fname" name="fname"><br><br>
+                        <input class ="form-item-input" type="text"  placeholder="Email Id" name="emailId"><br><br>
+                        <input class ="form-item-input" type="text"  placeholder="message" name="message"><br><br>
+                        <textarea class ="form-item-input "name="message"  cols="50" rows="4"></textarea>
+                        <br><br>
+                        <input type="submit" value="Submit">
+                      </form>
+                    </article> 
+                    
+                    <p class="contac-us-info">
+                        Feel free to write us all the event details so we can come up with the best possible quote we can
+                        offer you in budget.
+                    </p>
+            </section>
+        </section>
+
+
+    </section>
+    <footer class=footer-row>
+        @CopyRight reserved by PictureSque  @2024
+    </footer>
+
+</body>
+
+</html>
